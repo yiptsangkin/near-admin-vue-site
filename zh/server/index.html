@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服务端交互 | near-admin-vue</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="基于vue和ant design的好用中后台前端框架">
+    <link rel="preload" href="/near-admin-vue-site/assets/css/0.styles.c01e7c7a.css" as="style"><link rel="preload" href="/near-admin-vue-site/assets/js/app.85042fee.js" as="script"><link rel="preload" href="/near-admin-vue-site/assets/js/2.6a2f3ab9.js" as="script"><link rel="preload" href="/near-admin-vue-site/assets/js/23.c9dc1296.js" as="script"><link rel="prefetch" href="/near-admin-vue-site/assets/js/10.dc8d5654.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/11.aa3b3de8.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/12.56ba800c.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/13.fd015153.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/14.87d76265.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/15.2e2d244c.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/16.4cf587c1.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/17.e453e378.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/18.9ae749b1.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/19.d661a437.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/20.1e0fa030.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/21.a3be3d56.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/22.64214e67.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/24.9656d2ae.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/25.c231586f.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/26.62d23bf0.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/27.583396ed.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/3.bacf1511.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/4.4d64059e.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/5.229730c9.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/6.8d7520a6.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/7.aaf8ae91.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/8.0695be6f.js"><link rel="prefetch" href="/near-admin-vue-site/assets/js/9.db5b3c0f.js">
+    <link rel="stylesheet" href="/near-admin-vue-site/assets/css/0.styles.c01e7c7a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/near-admin-vue-site/zh/" class="home-link router-link-active"><!----> <span class="site-name">near-admin-vue</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/near-admin-vue-site/zh/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          项目
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/yiptsangkin/near-admin-cli" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  near-admin-cli
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/yiptsangkin/near-admin-react" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  near-admin-react
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/near-admin-vue-site/zh/server/.html" class="nav-link">
+  捐赠
+</a></div><div class="nav-item"><a href="https://github.com/yiptsangkin/near-admin-vue" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/near-admin-vue-site/zh/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          项目
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/yiptsangkin/near-admin-cli" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  near-admin-cli
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://github.com/yiptsangkin/near-admin-react" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  near-admin-react
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><a href="/near-admin-vue-site/zh/server/.html" class="nav-link">
+  捐赠
+</a></div><div class="nav-item"><a href="https://github.com/yiptsangkin/near-admin-vue" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/near-admin-vue-site/zh/guide/" class="sidebar-link">介绍</a></li><li><a href="/near-admin-vue-site/zh/layout/" class="sidebar-link">布局</a></li><li><a href="/near-admin-vue-site/zh/router/" class="sidebar-link">路由和菜单</a></li><li><a href="/near-admin-vue-site/zh/right/" class="sidebar-link">权限控制</a></li><li><a href="/near-admin-vue-site/zh/tag/" class="sidebar-link">标签栏</a></li><li><a href="/near-admin-vue-site/zh/page/" class="sidebar-link">新增页面</a></li><li><a href="/near-admin-vue-site/zh/style/" class="sidebar-link">样式</a></li><li><a href="/near-admin-vue-site/zh/server/" class="active sidebar-link">服务端交互</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/near-admin-vue-site/zh/server/#前端请求流程" class="sidebar-link">前端请求流程</a></li><li class="sidebar-sub-header"><a href="/near-admin-vue-site/zh/server/#网络请求" class="sidebar-link">网络请求</a></li><li class="sidebar-sub-header"><a href="/near-admin-vue-site/zh/server/#多环境目标服务控制" class="sidebar-link">多环境目标服务控制</a></li><li class="sidebar-sub-header"><a href="/near-admin-vue-site/zh/server/#从mock与服务相互切换" class="sidebar-link">从Mock与服务相互切换</a></li><li class="sidebar-sub-header"><a href="/near-admin-vue-site/zh/server/#网络请求本地缓存" class="sidebar-link">网络请求本地缓存</a></li></ul></li><li><a href="/near-admin-vue-site/zh/mock/" class="sidebar-link">Mock</a></li><li><a href="/near-admin-vue-site/zh/build/" class="sidebar-link">构建发布</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/near-admin-vue-site/zh/cors/" class="sidebar-link">跨域问题</a></li><li><a href="/near-admin-vue-site/zh/nots/" class="sidebar-link">不想使用typescript</a></li><li><a href="/near-admin-vue-site/zh/hooks/" class="sidebar-link">Git Hooks</a></li><li><a href="/near-admin-vue-site/zh/guidebook/" class="sidebar-link">风格指南</a></li><li><a href="/near-admin-vue-site/zh/i18n/" class="sidebar-link">国际化</a></li><li><a href="/near-admin-vue-site/zh/error/" class="sidebar-link">前端日志</a></li><li><a href="/near-admin-vue-site/zh/hotkey/" class="sidebar-link">快捷键</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>内置组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/near-admin-vue-site/zh/searchpannel/" class="sidebar-link">搜索面板</a></li><li><a href="/near-admin-vue-site/zh/commontable/" class="sidebar-link">通用表格</a></li><li><a href="/near-admin-vue-site/zh/multiselect/" class="sidebar-link">多列下拉选择</a></li><li><a href="/near-admin-vue-site/zh/smartinput/" class="sidebar-link">智能输入框</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="服务端交互"><a href="#服务端交互" class="header-anchor">#</a> 服务端交互</h1> <h2 id="前端请求流程"><a href="#前端请求流程" class="header-anchor">#</a> 前端请求流程</h2> <p>在near-admin中，一个完整的前端UI交互到服务端处理流程是这样的：</p> <ul><li>在assets/ts/api中创建对应前端模块的文件目录，并创建<code>apiUrl.ts</code>以及<code>apiMethod.ts</code>两个文件；</li> <li>在<code>apiUrl.ts</code>中维护请求的地址，注意，需要将host部分定义为读取配置文件；</li> <li>在<code>apiMethod.ts</code>中封装请求事件，使用到工具库<code>utils.ts</code>中sendReq方法对请求事件进行编写；</li> <li>选择async/await或者回调的请求模式；</li> <li>获取请求响应；</li></ul> <p>接下来我们通过auth应用中的登录事件这个简单的例子来说明下如何按照约定编写一个网络请求。</p> <h2 id="网络请求"><a href="#网络请求" class="header-anchor">#</a> 网络请求</h2> <p>1、首先我们在<code>assets/ts/api</code>中创建了<code>auth</code>目录用于存放登录模块用到的相关接口，并创建<code>apiUrl.ts</code>以及<code>apiMethod.ts</code>分别存放地址以及请求方法。</p> <p>2、我们编辑apiUrl，在里面写入一个根据用户账户密码登录的接口。这里需要注意的是，apiHost统一通过comConfig中的apiHost属性来维护，在near-admin中，
+会通过<code>apiConfigProd.js</code>，<code>apiConfigUat.js</code>，<code>apiConfigDev.js</code>这三个独立文件来维护api请求目标服务，方便一些通过docker等容器技术动态生成文件，
+而不是打包到代码本身当中。</p> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>near-admin打包配置已经通过判断打包的环境默认在打包出来的html模板上外部引入了相关的apiConfig文件。</p></div> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// apiUrl.ts</span>
+<span class="token keyword">import</span> comConfig <span class="token keyword">from</span> <span class="token string">'@custom/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> apiHost <span class="token operator">=</span> comConfig<span class="token punctuation">.</span>apiHost
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    checkLoginByAccount<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>apiHost<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/mock-data/checkLoginByAccount</span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>3、在<code>apiMethod.ts</code>中编写具体的请求逻辑，需要注意的是，请求参数需要按照ReqType的类型进行提交。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">ReqType</span> <span class="token punctuation">{</span>
+    headers<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span>
+    responseType<span class="token operator">?</span><span class="token operator">:</span> <span class="token operator">|</span> <span class="token string">'arraybuffer'</span> <span class="token operator">|</span> <span class="token string">'blob'</span> <span class="token operator">|</span> <span class="token string">'document'</span> <span class="token operator">|</span> <span class="token string">'json'</span> <span class="token operator">|</span> <span class="token string">'text'</span> <span class="token operator">|</span> <span class="token string">'stream'</span><span class="token punctuation">,</span>
+    method<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+    timeout<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+    data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span>
+    url<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+    success<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span>
+    fail<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span>
+    error<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// apiMethod.ts</span>
+<span class="token keyword">import</span> apiUrl <span class="token keyword">from</span> <span class="token string">'./apiUrl'</span>
+<span class="token keyword">import</span> utils <span class="token keyword">from</span> <span class="token string">'@corets/utils'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>ReqType<span class="token punctuation">,</span> ResType<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@corets/type'</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">checkLoginByAccount</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">reqType<span class="token operator">:</span> ReqType</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    reqType<span class="token punctuation">.</span>method <span class="token operator">=</span> <span class="token string">'POST'</span>
+    reqType<span class="token punctuation">.</span>url <span class="token operator">=</span> apiUrl<span class="token punctuation">.</span>checkLoginByAccount
+    <span class="token keyword">const</span> result <span class="token operator">=</span> utils<span class="token punctuation">.</span><span class="token function">sendReq</span><span class="token punctuation">(</span>reqType<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    checkLoginByAccount
+<span class="token punctuation">}</span>
+</code></pre></div><p>4、在对应的前端页面中引入相应的apiMethod，并进行网络请求方法的调用。对于near-admin来说，提供的请求库是支持async/await以及回调两种模式的，开发者
+可以根据自己的需要习惯进行使用，区别在于使用回调方法的话，框架本身会对请求方式结果进行初步的判断，主要是根据http的状态码和返回json的code值来区分。而通过
+async/await则需要自己进行请求结果进行判断。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> api <span class="token keyword">from</span> <span class="token string">'@api/auth/apiMethod'</span>
+
+<span class="token operator">...</span>
+
+<span class="token comment">// 回调模式</span>
+api<span class="token punctuation">.</span><span class="token function">checkLoginByAccount</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        username<span class="token punctuation">,</span>
+        password
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">res<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        self<span class="token punctuation">.</span>$message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>
+            self<span class="token punctuation">.</span><span class="token function">$t</span><span class="token punctuation">(</span>dict<span class="token punctuation">.</span>localeObj<span class="token punctuation">.</span>loginForm<span class="token punctuation">.</span>loginSuccess<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+            <span class="token number">2</span>
+        <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            self<span class="token punctuation">.</span><span class="token function">toManage</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">fail</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">res<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        self<span class="token punctuation">.</span>$message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="多环境目标服务控制"><a href="#多环境目标服务控制" class="header-anchor">#</a> 多环境目标服务控制</h2> <p>正如上面提到的，near-admin的目标服务配置不会打包到代码当中，支持动态生成，对于本地开发来说，建议都通过devServer进行代理，这样子不用担心打包的时候
+忘记修改请求地址，只需要选择正确的环境参数即可。</p> <p>如果框架内置的三个环境<code>prod</code> <code>uat</code> <code>dev</code>不满足开发者使用的话，可以自行到<code>build/config</code>中的<code>envList</code>中增加环境，这样子在构建的时候，框架会自动在
+<code>public/static/js</code>中创建对应的配置文件。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// build/config.js</span>
+<span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    envList<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">'dev'</span><span class="token punctuation">,</span>
+        <span class="token string">'uat'</span><span class="token punctuation">,</span>
+        <span class="token string">'prod'</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">提示</p> <p>需要注意的是，如果自行增加了对应的环境，需要到<code>package.json</code>中增加对应环境的打包指令。</p></div> <h2 id="从mock与服务相互切换"><a href="#从mock与服务相互切换" class="header-anchor">#</a> 从Mock与服务相互切换</h2> <p>框架层面在配置中增加了一个<code>isMock</code>的开关，如果打开的话默认会走匹配mock的规则，如果关闭的话则相当于不会拦截请求直接请求对应的目标服务。开发者可以在
+<code>assets/ts/custom/config</code>中修改<code>defaultSwitch</code>的isMock属性，或者直接在管理界面的个性化设置那里进行调整也可以。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// assets/ts/custom/config.ts</span>
+<span class="token keyword">const</span> defaultSwitch <span class="token operator">=</span> <span class="token punctuation">{</span>
+    isMock<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    isHotKey<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    isBreadCrumb<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    isCache<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    isI18n<span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre></div><img src="/near-admin-vue-site/images/doc/ismock.png"> <p align="center">mock切换</p> <h2 id="网络请求本地缓存"><a href="#网络请求本地缓存" class="header-anchor">#</a> 网络请求本地缓存</h2> <p>对于有些数据量比较大的数据（如一些基础树状下拉数据，不经常变更），我们希望在请求时候不走后端请求或者不走后端的缓存（因为有一定的下载时间），我们想放在前端存储的话，
+可以在请求的headers处设置<code>local-cache: true</code>，这样的话，同样参数和请求地址的网络请求将会直接请求本地存储localStorage去获取返回值。</p> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>需要注意的是，localStorage本身有大小的存储，因此这个本地缓存使用需要比较小心，不过也不用过于担心，框架层面已经处理好一些超存储的逻辑，一旦localStorage满了将会
+清空一部分的缓存数据。</p></div> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// assets/ts/api/manage/apiMethod.ts</span>
+<span class="token keyword">const</span> <span class="token function-variable function">getUserMenu</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">reqType<span class="token operator">:</span> ReqType</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    reqType<span class="token punctuation">.</span>method <span class="token operator">=</span> <span class="token string">'POST'</span>
+    reqType<span class="token punctuation">.</span>headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'local-cache'</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+    reqType<span class="token punctuation">.</span>url <span class="token operator">=</span> apiUrl<span class="token punctuation">.</span>getUserMenu
+    <span class="token keyword">const</span> result <span class="token operator">=</span> utils<span class="token punctuation">.</span><span class="token function">sendReq</span><span class="token punctuation">(</span>reqType<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+</code></pre></div><img src="/near-admin-vue-site/images/doc/cacheapi.png"> <p align="center">缓存的请求地址会在console提示</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/near-admin-vue-site/zh/style/" class="prev">
+        样式
+      </a></span> <span class="next"><a href="/near-admin-vue-site/zh/mock/">
+        Mock
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/near-admin-vue-site/assets/js/app.85042fee.js" defer></script><script src="/near-admin-vue-site/assets/js/2.6a2f3ab9.js" defer></script><script src="/near-admin-vue-site/assets/js/23.c9dc1296.js" defer></script>
+  </body>
+</html>
